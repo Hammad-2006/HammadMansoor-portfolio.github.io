@@ -1,0 +1,590 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+:root {
+   --bg-dark: #000000;
+   --text-light: #ffffff;
+   --accent-green: #10b981;
+   --text-gray: #d1d5db;
+   --card-bg: #1f2937;
+}
+
+body {
+   font-family: 'Arial', sans-serif;
+   background-color: var(--bg-dark);
+   color: var(--text-light);
+   line-height: 1.6;
+}
+
+/* Container */
+.container {
+   width: 90%;
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 2rem 1rem;
+}
+
+/* Header Section */
+.header {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   min-height: 100vh;
+   text-align: center;
+}
+
+.header-content {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 1rem;
+}
+
+.intro-text {
+   font-size: 1.2rem;
+   color: var(--text-gray);
+}
+
+.name {
+   font-size: 4rem;
+   font-weight: bold;
+   background: linear-gradient(to right, var(--text-light), var(--accent-green));
+   -webkit-background-clip: text;
+   color: transparent;
+}
+
+.role {
+   font-size: 2rem;
+   color: var(--accent-green);
+}
+
+/* Profile Image */
+.profile-image {
+   width: 250px;
+   height: 250px;
+   border-radius: 50%;
+   object-fit: cover;
+   border: 4px solid var(--accent-green);
+   margin-top: 2rem;
+}
+
+/* Social Links */
+.social-links {
+   display: flex;
+   gap: 1.5rem;
+   margin-top: 1.5rem;
+}
+
+.social-links a {
+   color: var(--text-light);
+   font-size: 1.5rem;
+   text-decoration: none;
+   transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+   color: var(--accent-green);
+}
+
+/* About Me Section */
+.about-section {
+   background-color: rgba(31, 41, 55, 0.5);
+   padding: 3rem 0;
+   text-align: center;
+}
+
+.about-content {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   gap: 2rem;
+}
+
+.about-text {
+   max-width: 600px;
+   color: var(--text-gray);
+   font-weight: bold;
+   font-size: larger;
+}
+
+/* Projects Section */
+.projects-section {
+   padding: 3rem 0;
+}
+
+.projects-grid {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+   gap: 1.5rem;
+   margin-bottom: 1.5rem;
+}
+
+.project-card {
+   background-color: var(--card-bg);
+   padding: 1.5rem;
+   border-radius: 19px;
+   text-align: center;
+   transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+   transform: scale(1.05);
+}
+
+.project-title {
+   color: var(--accent-green);
+   margin-bottom: 0.1rem;
+   margin-top: 0.5rem;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+   .name {
+       font-size: 2.5rem;
+   }
+
+   .role {
+       font-size: 1.5rem;
+   }
+
+   .about-content {
+       flex-direction: column;
+   }
+
+   .projects-grid {
+       grid-template-columns: 1fr;
+   }
+
+}
+
+
+.social-links,i{
+   font-size: xx-large;
+   cursor: pointer;
+
+}
+.icon:hover{
+   color: #10b981;
+   transition: 1s ease-in-out;
+}
+.about-section{
+   border-radius: 29px;
+   backdrop-filter: blur(10px) saturate(180%);
+  -webkit-backdrop-filter: blur(10px) saturate(180%);
+  background: #1b201e;
+  
+  box-shadow: 0 4px 10px rgba(23, 23, 23, 0.3);
+}
+.aboutme{
+   font-weight: 900;
+   font-size:xx-large ;
+}
+.project-card, h3,p{
+   text-align:left ;
+}
+.icon{
+   font-size: 3rem;
+}
+.project-card,h3{
+   font-size: larger;
+   font-weight: bold;
+   font-family: Arial, Helvetica, sans-serif;
+}
+.project-card,p{
+   color: #cbcbcb;
+}
+.project-card{
+   background-color: #1b201e;
+   cursor: pointer;
+}
+.about-text{
+   text-align: center;
+}
+.creativeworks{
+   font-size:xx-large;
+   font-weight:111rem;
+}
+
+
+
+
+
+
+
+
+.carousel-container {
+   position: relative;
+   width: 500px;
+   overflow: hidden;
+   
+   
+}
+.carousel {
+   display: flex;
+   transition: transform 0.5s ease-in-out;
+   width: 1500px;
+}
+.carousel-image {
+   width: 500px;
+   height: 300px;
+   object-fit: cover;
+   
+   position: relative;
+   
+}
+.prev, .next {
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   background-color: rgba(0, 0, 0, 0.5);
+   color: white;
+   border: none;
+   padding: 10px;
+   cursor: pointer;
+}
+.prev { left: 10px; }
+.next { right: 10px; }
+
+
+
+.carousel-container{
+   position: relative;
+   display: block;
+   align-content: center;
+   left: 56.5%;
+   border: #10b981;
+   border-radius: 19px;
+   
+   bottom: 12.5rem;
+   
+}
+@media screen and (max-width: 768px){
+   .carousel-container{
+      position: relative;
+      display: block;
+      align-content: center;
+      left: 55%;
+      border: #10b981;
+      border-radius: 19px;
+      
+      grid-template-columns: 1fr;
+      flex-direction: column;
+   }
+   .hammad{
+      flex-direction: column;
+      grid-template-columns: 1fr;
+      text-align: left;
+   }
+}
+
+ .projects{
+   width: 80%;
+   margin:auto;
+}
+.headingofP{
+   width :40%;
+   margin-left: 10%;
+   text-align: left;
+   font-size: xx-large;
+   font-weight:890;
+   color:#10b981;
+   
+   
+}
+.details p{
+   width:35%;
+   margin-left: 10%;
+   text-align: left;
+   font-weight: 600;
+   font-size: larger;
+   
+   
+}
+.details{
+   display: inline;
+   
+   position: relative;
+   top: 5rem;
+   
+}
+.hammad{
+   
+   text-align: left;
+   padding: .2rem .5rem;
+   
+  
+}
+.Wp{
+   display: inline-block; /* Shrink-wrap to content */
+  width: auto; /* Adjust width based on content */
+  height: auto; /* Adjust height based on content */
+  padding: 0; /* No extra spacing */
+  margin: 0; /* No extra spacing */
+  border: .1rem solid black; /* Optional: just to see the div */
+  position: relative;
+  left: 9.5rem;
+  background-color:rgba(103, 199, 244, 0.396);
+  
+  color: #93beff;
+  border-radius: .7rem;
+  position: relative;
+  top: 1rem;
+   
+}
+.color{
+   color:rgb(255, 242, 0);
+}
+
+
+
+
+.details1 p{
+   width:auto;
+   margin-left: 10%;
+   text-align: right;
+   font-weight: 600;
+   font-size: larger;
+   
+   
+}
+.details1 h2{
+   width: 100%;
+   position: relative;
+   right: 3.5rem;
+   text-align: right;
+}
+.details1{
+   display: inline-block; /* Shrink-wrap to content */
+   width: 50%; /* Adjust width based on content */
+   height: auto;
+   position: relative;
+   padding: 0; /* No extra spacing */
+   margin: 0;
+   left :80%;
+   top: 5rem;
+}
+.project2{
+   max-width: 69%;
+   align-items: end;
+}
+
+
+.crousel-container-detail1{
+   display: inline;
+   position: relative;
+   right :46%;
+   width : 50%;   
+}
+.crousel-container-detail{
+   display: inline;
+   width :50%;
+}
+
+.Wp1{
+  display: inline-block; /* Shrink-wrap to content */
+  width: auto; /* Adjust width based on content */
+  height: auto; /* Adjust height based on content */
+  padding: 0; /* No extra spacing */
+  margin: 0; /* No extra spacing */
+  border: .1rem solid black; /* Optional: just to see the div */
+  position: relative;
+  left: 66%;
+  background-color:rgba(103, 199, 244, 0.396);
+  
+  color: #93beff;
+  border-radius: .7rem;
+  top: 1rem;
+  
+}
+.Wp2{
+   display: inline-block; /* Shrink-wrap to content */
+  width: auto; /* Adjust width based on content */
+  height: auto; /* Adjust height based on content */
+  padding: 0; /* No extra spacing */
+  margin: 0; /* No extra spacing */
+  border: .1rem solid black; /* Optional: just to see the div */
+  position: relative;
+  left: 66%;
+  background-color:rgba(197, 103, 244, 0.396);
+  
+  color: #e1a3fd;
+  border-radius: .7rem;
+  top: 1rem;
+}
+.store{
+   font-weight: 300;
+}
+.project1{
+   display: inline;
+}
+.slider-container {
+   position: relative;
+   width: 80%;
+   max-width: 500px;
+   overflow: hidden;
+   margin-left: 15%;
+   bottom: 11rem;
+
+   border-radius: 19px;
+}
+.slider {
+   display: flex;
+   transition: transform 0.5s ease-in-out;
+}
+.slider-item {
+
+   width: 100%;
+   flex: 0 0 100%;
+   height: auto;
+   object-fit: cover;
+}
+.control-left, .control-right {
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   background-color: rgba(0, 0, 0, 0.5);
+   color: white;
+   border: none;
+   padding: 10px;
+   cursor: pointer;
+}
+.control-left { left: 10px; }
+.control-right { right: 10px; }
+
+
+.hammad1{
+   display: flex;
+   position: relative;
+   top:.1rem;
+   right:1rem;
+}
+
+
+
+
+.carousel-wrapper {
+   position: relative;
+   width: 80%;
+   max-width: 500px;
+   overflow: hidden;
+   left: 57%;
+   bottom:13rem;
+   border-radius: 19px;
+}
+.carousel-track {
+   display: flex;
+   transition: transform 0.5s ease-in-out;
+}
+.carousel-slide {
+   width: 100%;
+   flex: 0 0 100%;
+   height: auto;
+   object-fit: cover;
+}
+.nav-left, .nav-right {
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   background-color: rgba(0, 0, 0, 0.5);
+   color: white;
+   border: none;
+   padding: 10px;
+   cursor: pointer;
+}
+.nav-left { left: 10px; }
+.nav-right { right: 10px; }
+
+
+.projectsss{
+   position: relative;
+   top:7rem;
+}
+.project2{
+   position: relative;
+   bottom: 5rem;
+}
+.project3{
+   position: relative;
+   bottom: 5rem;
+}
+.projects-grid{
+   position: relative;
+   top: 3rem;
+}
+.project1{
+   position: relative;
+   bottom: 2rem;
+}
+.projects-section{
+   position: relative;
+   bottom:3rem;
+}
+footer{
+   
+   
+   position: relative;
+   
+   margin: auto;
+   padding-top: 9rem;
+   width: 80%;
+
+}
+
+
+
+.hammad55 {
+   text-align: center;
+   padding: 2rem 1rem;
+   max-width: 600px;
+   margin: 0 auto;
+}
+
+.k1 {
+   font-size: 2.5rem;
+   margin-bottom: 1rem;
+   color:#10b981;
+}
+
+.k11 {
+   font-size: 1.5rem;
+   margin-top: 0;
+   color: #555;
+   text-align: center;
+   word-break: break-word; /* Ensures email doesn't overflow on small screens */
+}
+
+/* Divider */
+.hr1 {
+   width: 80%;
+   max-width: 600px;
+   margin: 2rem auto;
+   border: none;
+   border-top: 1px solid #10b981  ;
+}
+
+/* Footer credit */
+.credit {
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+   gap: 0.5rem;
+   margin: 1rem auto;
+   color: #777;
+   max-width: 600px;
+   padding: 0 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+   .k1 {
+       font-size: 2rem;
+   }
+   
+   .k11 {
+       font-size: 1.2rem;
+   }
+}
